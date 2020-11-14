@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Lenconda 的技术博客 (Page 5)</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=42f2ea2754" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/firacode@2.0.0/distr/fira_code.min.css" />
+  <link rel="stylesheet" href="//highlightjs.org/static/demo/styles/vs2015.css">
+
+	<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://blog.lenconda.top/page/5/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="prev" href="http://blog.lenconda.top/page/4/" />
+    <link rel="next" href="http://blog.lenconda.top/page/6/" />
+    <script src="/public/ghost-sdk.min.js?v=42f2ea2754"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "66775b680128"
+});
+</script>
+    <meta name="generator" content="Ghost 2.14" />
+    <link rel="alternate" type="application/rss+xml" title="Lenconda 的技术博客" href="http://blog.lenconda.top/rss/" />
+</head>
+
+<body class="paged">
+
+	<div class="nav-header">
+		<nav class="nav-wrapper">
+				<ul role="navigation" aria-label="Navigation">
+		<li class="nav-zhu-ye" role="presentation"><a href="http://blog.lenconda.top/"><span>主页</span></a></li>
+		<li class="nav-biao-qian" role="presentation"><a href="http://blog.lenconda.top/tags/"><span>标签</span></a></li>
+		<li class="nav-guan-yu" role="presentation"><a href="http://blog.lenconda.top/about/"><span>关于</span></a></li>
+		<li class="nav-jian-li" role="presentation"><a href="http://resume.lenconda.top"><span>简历</span></a></li>
+		<li class="nav-zan-zhu" role="presentation"><a href="http://blog.lenconda.top/sponsor/"><span>赞助</span></a></li>
+</ul>
+
+				<ul class="nav-side">
+					<li class="nav-twitter"><a title="Twitter" href="https://twitter.com/LinuxerPHL" title="@LinuxerPHL" target="_blank"><i class="icon icon-twitter"></i><span>Twitter</span></a></li>
+					<li class="nav-facebook"><a title="Facebook" href="https://www.facebook.com/profile.php?id&#x3D;100010553585752" title="profile.php?id&#x3D;100010553585752" target="_blank"><i class="icon icon-facebook"></i><span>Facebook</span></a></li>
+					<li class="nav-subscribe"><a title="Subscribe" href="http://blog.lenconda.top/subscribe/" target="_blank"><i class="icon icon-mail"></i><span>订阅</span></a></li>
+					<li class="nav-rss"><a title="RSS" href="http://blog.lenconda.top/rss/" target="_blank"><i class="icon icon-rss"></i><span>RSS</span></a></li>
+					<li class="nav-search" style="display: none;"><a title="搜索"><i class="icon icon-search"></i><span>搜索</span></a></li>
+				</ul>
+		</nav>
+
+		<div class="nav-wrapper-control">
+			<div class="inner">
+				<a class="nav-menu"><i class="icon icon-menu"></i>菜单</a>
+				<a class="nav-search" style="display: none;" title="搜索"><i class="icon icon-search"></i><span>搜索</span></a>
+			</div>
+		</div>
+	</div>
+	<div class="nav-close"></div>
+
+	<section class="page-wrapper">
+
+		<header class="blog-header ">
+	<div class="inner">
+		<div class="box blog-box">
+			<h1 class="blog-name">Lenconda 的技术博客</h1>
+			<span class="blog-description">记录学习技术的过程与生活</span>
+	</div>
+</header>
+
+<div id="index" class="container">
+
+	<main class="content" role="main">
+
+		<div class="extra-pagination">
+	<nav class="pagination">
+	<div class="inner">
+		<div class="box pagination-box" role="navigation" aria-label="Pagination Navigation">
+			<a title="更新的文章" class="pagination-next" href="/page/4/"><i class="icon icon-arrow-left"></i> <span class="pagination-label">更新的文章</span></a>
+			<span class="pagination-info">第 5 页，共 7 页</span>
+			<a title="更早的文章" class="pagination-prev" href="/page/6/"><span class="pagination-label">更早的文章</span> <i class="icon icon-arrow-right"></i></a>
+		</div>
+	</div>
+</nav>
+
+</div>
+
+
+<article class="post tag-git tag-github">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/12/16/5bb73c2d5306fb00018554d8/">HackWeek踩坑记(4) - GitHub仓库改名</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="16-12-2017">16 Dec 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/git/">Git</a>
+            <a class="post-meta-tag" href="/tag/github/">GitHub</a>
+        </span>
+			<p class="post-excerpt">在我们组立项之初，我就立马在GitHub上建立起了代码仓库。然而猝不及防的事情时有发生，项目名称发生过好几次变动，很多地方都需要改变。而最让我头疼的就是GitHub上仓库的名字，因为改名之后从本地push到远程仓库可能会发生一些冲突，我不想冒这个险，但是有不想先把本地的目录删掉再去GitHub改名再clone一份到本地。于是经过查阅资料，我找到了比较靠谱的方法，只是在这篇文章里做一下备忘：~ → git remote -v	#查看远程仓库的配置 查看完远程仓库的配置之后，根据返回信息的需要，进行下一步的操作~ → git remote remove origin	#在远程仓库中删除旧的origin 经过这一步操作可以将远程仓库中旧的origin删除，然后就能在远程添加新的.git~ → git remote add origin git@github.com:USERNAME/NEWNAME.git 添加完之后，就可以将本地的目录重命名成新的名字了。&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-mysql">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/12/16/5bb73bd05306fb00018554d4/">HackWeek踩坑记(3) - SQL获取某一条记录的index</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="16-12-2017">16 Dec 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/mysql/">MySQL</a>
+        </span>
+			<p class="post-excerpt">第三个坑：SQL获取某一条记录的index 我们组的项目中的一个API涉及到个人排名信息展示，当时在和其他的开发人员讨论时确定了两种方法： 先采用 SELECT * FROM `user` ORDER BY `percentage` desc 查询按照分数将序排列的dict，再由Python封装成json传回给前端，前端遍历一遍数组中所有元素，用条件语句筛选当前用户所在的index，再将index加上1，得到用户当前的排名； 2. 先采用 SELECT * FROM `user` ORDER BY `percentage` desc 得到一个排列后的记录，再从中寻找指定条件的记录，获取这个记录所在的index，直接将数值传回给前端。 经过我们数次实际的数据库查询实验，发现第一种方案在数据量达到一定数量时会严重拖慢前端渲染的速度，而第二种方案很难通过SQL查询的方式直接返回一个数值。这两个方案都有缺陷，一度使我们很尴尬。 后来，通过询问学长，我们在网上查阅资料时偶然发现了一个和我们的需求十分相似的SQL语句： 这引起了我们的兴趣，于是我们很快照着这篇文章的模板写出了我们自己的代码： def chaxunmingci(self):         conn = get_conn()         cursor=conn.cursor(&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-jquery tag-webpack tag-vue-js">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/12/16/5bb73b825306fb00018554ce/">HackWeek踩坑记(2) - 在Webpack中引入jQuery</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="16-12-2017">16 Dec 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/jquery/">jQuery</a>
+            <a class="post-meta-tag" href="/tag/webpack/">Webpack</a>
+            <a class="post-meta-tag" href="/tag/vue-js/">Vue.js</a>
+        </span>
+			<p class="post-excerpt">第二个坑：在Webpack中引入jQuery jQuery从诞生起，就以其简洁、高效迅速得到开发者的认可，如今绝大多数网站都采用jQuery库。而在我们组的项目中，我也想使用jQuery编写Ajax、元素选取之类的代码，但是我发现直接在HTML入口文件src/index.html中加入一个引入jQuery的script标签似乎并不会其任何作用，相反，引入JS文件之后反而给整个项目带来一大堆的报错。我也尝试过很多种方法将jQuery代码放在不同的位置，但是都不奏效。所以迫于时间压力，我不得不放弃在项目中引入jQuery的想法，这也成了这个项目中最大的遗憾。 尝试引入 今天HackWeek刚结束，我就迫不及待开始在Google上查阅相关资料。在查阅资料的过程中，我偶然发现其实jQuery也可以向其他的库一样通过模块的方式引入，于是我尝试在项目根目录下执行npm install jquery，执行成功，随后我再去JS入口文件src/main.js中写入 import $ from 'jquery' 在页面写好一段jQuery代码，发现console还是报错： 回头一看main.js发现import jQuery的那一行代码还是灰色的，应该是还有哪个地方没有配置好导致$没被使用，造成在代码中使用$之后报错。 解决问题 最后我在百度中寻找到了一种比较可行的办法，大概的意思就是将jQuery库当做一个插件写入Webpack的基本配置文件中，大概的解决办法是： 先在src/main.js中写入：&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-css tag-javascript tag-rem">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/12/16/5bb73af35306fb00018554c8/">HackWeek踩坑记(1) - 移动端H5适配</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="16-12-2017">16 Dec 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/css/">CSS</a>
+            <a class="post-meta-tag" href="/tag/javascript/">Javascript</a>
+            <a class="post-meta-tag" href="/tag/rem/">REM</a>
+        </span>
+			<p class="post-excerpt">开篇 有幸参加了2017年南昌大学家园工作室举办的为期两周的黑客马拉松(Hack Weeks)。其实我很想通过类似的活动提升自己的能力。只不过当我真正参与到项目的开发中，才会发现，自己还是太年轻！ 本系列文章记录了我在参与整个团队协作过程中遇到的问题和心得体会，其内容将会涵盖前端开发、UI设计原则、SQL语法、服务器配置以及如何高效地进行团队协作等方面的内容。 第一个坑：移动端适配与视觉稿的呈现 可以说在这次Hack Week活动中折磨我最久的就是视觉稿。因为我以前并没有移动端适配和根据视觉稿来编写UI的经验，所以，当我拿到设计师给我的视觉稿时，其实我是一脸懵逼的。对视觉稿使用的不熟练以及移动端适配经验的缺失，成为在后来的两个星期中，不断折磨我的梦魇，也出于这些原因，给设计师带来很大的麻烦。因此，我深感自己的能力不足，尤其是移动端H5页面制作方面的知识，亟待补充。 今天我们的项目终于完成了调试工作，趁此机会赶紧补习了移动端适配的方案。 在下面的文章中，我将参考使用Flexible实现手淘H5页面的终端适配学习移动终端H5适配 几个概念 物理像素(Physical Pixel) 物理像素又被称为设备像素(Device Pixel)，他是显示设备中一个最微小的物理部件。每个像素可以根据操作系统设置自己的颜色和亮度。正是这些设备像素的微小距离欺骗了我们肉眼看到的图像效果。 举例：iPhone 6的dp为 750 × 1334 设备独立像素(&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-css tag-html">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/12/01/5bb73a7b5306fb00018554c4/">给菜单的顶部添加一个小三角形</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="01-12-2017">01 Dec 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/css/">CSS</a>
+            <a class="post-meta-tag" href="/tag/html/">HTML</a>
+        </span>
+			<p class="post-excerpt">起因 最近在学习仿制百度首页。百度首页中有一个设置菜单很特别：由无序列表组成，但是外边框的上边缘有一个小三角。于是想做一个仿真的百度设置菜单。 制作 一切由border引起 如何用CSS画出直角三角形？以我当时的CSS知识水平，并没有接触到绘制直角三角形的技巧，直到一位学长的奇技淫巧点醒了我： 使用border！！！ 于半懵半醒中，我围观了一波学长大佬的操作： 1.先建立一个边框为红色10px，宽高均为100px的box： 	&lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;   &lt;meta charset=&quot;UTF-8&quot;&gt;   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-vue-js tag-nodejs tag-webpack">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/11/30/5bb73a3a5306fb00018554bf/">VueJS爬坑记（3） - 打包后无法渲染页面</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="30-11-2017">30 Nov 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/vue-js/">Vue.js</a>
+            <a class="post-meta-tag" href="/tag/nodejs/">NodeJS</a>
+            <a class="post-meta-tag" href="/tag/webpack/">Webpack</a>
+        </span>
+			<p class="post-excerpt">起因 使用Webpack学习VueJS一段时间之后，准备使用Webpack的build编译生成上线代码。 然而，在将npm run build之后生成的dist/目录部署上线时，却是一片空白 问题分析 打开Chrome开发者工具的Network板块时，发现大量的文件无法加载： 对首页路由进行元素分析，结果如下： 我的猜测如下： 经过Webpack打包的项目，默认的路由根目录都是#/开始的，而该页面所有的scripts引用的都是/static下，而非#/static下的，而这就是为什么整个项目的脚本源码文件都无法加载的原因。 填坑 经过上网查阅资料，我找到了Vue-cli项目中的打包配置文件的所在：/config/index.js，其中的build字段如下： 既然是针对build的配置，而且编译后所有的scripts都是放在#/static/下的，于是想到使用相对路径的根目录./代替绝对路径的根目录/，再次执行npm run build，问题解决。&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-vue-js tag-nodejs tag-webpack">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/11/23/5bb739ea5306fb00018554ba/">VueJS爬坑记（2） - 依赖问题和Webpack打包</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="23-11-2017">23 Nov 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/vue-js/">Vue.js</a>
+            <a class="post-meta-tag" href="/tag/nodejs/">NodeJS</a>
+            <a class="post-meta-tag" href="/tag/webpack/">Webpack</a>
+        </span>
+			<p class="post-excerpt">起因 从入坑Webpack已经有一个礼拜了，在这期间我注意到，通过Vue脚手架搭建的Web应用程序通常需要非常多的依赖，但是如果遇上多人协作共同开发这个APP的话，如果依赖问题处理不了，应该是一件十分尴尬的事。还有一点就是Vue的应用程序不可能在生产环境下也用NodeJS跑，这是在开发过程中维拉方便调试和新增或删除模块而使用npm的run功能来快速搭建一个支持热更新的Web应用程序。 填坑！ 解决代码迁移带来的依赖问题 就像上文中说到的，我们构建一个应用程序时遇到多人协作，将Node模块一块儿共享出去是完全不符合常理的，而且这期间我在GitHub上寻找了一些使用Vue-cli或者是其他NodeJS项目构建的WebApp，发现代码结构中并没有存放NodeJS模块的.node_modules目录，通过.gitignore将这个目录排除在外，说明依赖信息应该装载在某个文件中（目前还在研究），而他人只需要把其他主要的代码克隆下来，在根据这个依赖信息寻找必要的NodeJS包。 那么问题来了：手动安装全部的依赖并不合理，一定还有某种自动化的方式将依赖部署到位。 经过GitHub上类似项目的README和百度、Google的查找，同时经过自己的验证，最终发现了两种方法可以达到目的： 通过npm install 这是最简单的方法，一键搞定所有依赖关系，只需在项目根目录下运行下面的命令： npm install 再执行： npm run dev 即可完成所有的依赖工作，并在本地NodeJS服务器中以开发模式运行。 通过yarn install yarn是又一个强大的工具，和npm使用相似： 首先要通过npm安装yarn： npm&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-vue-js tag-webpack tag-nodejs">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/11/23/5bb739885306fb00018554b3/">VueJS爬坑记（1） - 关于在单文件中的根节点</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="23-11-2017">23 Nov 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/vue-js/">Vue.js</a>
+            <a class="post-meta-tag" href="/tag/webpack/">Webpack</a>
+            <a class="post-meta-tag" href="/tag/nodejs/">NodeJS</a>
+        </span>
+			<p class="post-excerpt">前言 最近在通过Vue-cli配合Webpack构建VueJS应用学习VueJS，但是由于对NodeJS用法和Webpack语法不熟悉，导致错误的排查很困难。所以，我准备在博客里开一个专栏记录VueJS爬坑过程。顺便结合VueJS学习ES6的语法。 起因 最近开始接触VueJS的脚手架工具vue-cli，并逐步了解VueJS的单文件组件的写法。在最近的某一天，我使用单文件创建了一个导航栏的组件Navbar.vue，并希望将其引入视图入口文件/src/App.vue中，结果页面突然抛出一段报错信息，截图如下（情景再现）： 寻找解决方案 首先，得到这个信息，就基本上可以确定是/src/App.vue出现了问题，而且一定是引入了组件之后产生的； 这种NodeJS的报错对于我来说还是十分陌生的，，这一报错也让我措手不及，最开始我还以为是我引入组件的语法或者路径出现了错误，但是仔细检查之后发现并没有此类问题； 于是我又返回报错页面查看报错信息，终于从结尾处找到了一条貌似有用的信息 Component template should contain exactly one root element. If you are using v-if ... 仔细琢磨这句话我好像明白了点什么，“组件模板必须包含一个根组件”。但是我并没有完全弄明白是怎么回事，&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<nav class="pagination">
+	<div class="inner">
+		<div class="box pagination-box" role="navigation" aria-label="Pagination Navigation">
+			<a title="更新的文章" class="pagination-next" href="/page/4/"><i class="icon icon-arrow-left"></i> <span class="pagination-label">更新的文章</span></a>
+			<span class="pagination-info">第 5 页，共 7 页</span>
+			<a title="更早的文章" class="pagination-prev" href="/page/6/"><span class="pagination-label">更早的文章</span> <i class="icon icon-arrow-right"></i></a>
+		</div>
+	</div>
+</nav>
+
+
+	</main>
+
+</div>
+
+
+		<div id="search" class="container">
+			<div class="content">
+				<div class="blog-header">
+					<div class="inner">
+						<div class="archive archive-search box archive-box">
+							<form class="search">
+								<input type="text" id="search-field" placeholder="搜索&#8230;" />
+								<input type="submit" value="search" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<div id="results"></div>
+			</div>
+			<div class="search-close"></div>
+		</div>
+
+		<div class="nav-footer">
+			<nav class="nav-wrapper">
+				<span class="nav-copy">Lenconda 的技术博客 &copy; 2020</span>
+			</nav>
+		</div>
+
+	</section>
+
+	<script type="text/javascript" src="/assets/js/script.js?v=42f2ea2754"></script>
+
+	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.12.0/js/md5.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122660306-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122660306-1');
+</script>
+
+<script>
+  var footer = document.querySelector('.nav-footer > nav.nav-wrapper');
+  var credits = document.createElement('span');
+  credits.classList.add('nav-credits');
+  credits.innerText = '赣 ICP 备 18003233 号 - 1';
+  footer.append(credits);
+</script>
+
+<style>
+#show-disqus {
+  display: none;
+}
+.gt-comment-content {
+  text-align: left;
+}
+button.gt-btn {
+    border-radius: 0!important;
+    border: 1px solid #c4c7cc!important;
+    text-align: center;
+    color: #909499!important;
+    transition: all ease 0.2s!important;
+    box-sizing: border-box;
+}
+button.gt-btn:hover {
+  background-color: #fff!important;
+  border-color: #333!important;
+  color: #333!important;
+}
+button.gt-btn-public, button.gt-btn-login {
+  background-color: #333!important;
+  color: #fff!important;
+  border-color: #333!important;
+}
+.gt-container .gt-svg svg {
+  fill: #333!important;
+}
+.gt-container .gt-comment-admin .gt-comment-content {
+  background-color: #f9f9f9!important;
+}
+.gt-header-controls-tip {
+  display: none!important;
+}
+.gt-header-textarea, .gt-container .gt-header-preview {
+  border-radius: 0 !important;
+}
+.gt-container a {
+  color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+    box-shadow: inset 0 -1px 0 #333 !important;
+    transition: all ease-out 0.1s !important;
+  border-bottom: none !important;
+}
+.gt-container a:hover {
+  box-shadow: inset 0 -2px 0 #333!important;
+}
+a.gt-comment-like, a.gt-comment-edit, .gt-popup a,
+a.gt-avatar-github, a.gt-avatar-github:hover,
+a.gt-comment-reply, a.gt-comment-reply:hover,
+a.gt-comment-like:hover, a.gt-comment-edit:hover, .gt-popup a:hover {
+  box-shadow: none !important;
+  text-decoration: none!important;
+}
+.gt-popup a.is--active {
+  font-weight: 700!important;
+}
+.gt-popup a.is--active::before {
+  display: none!important;
+}
+</style>
+
+<script>
+const gitalk = new Gitalk({
+  clientID: '0fa9ddf60596f0aebf17',
+  clientSecret: '7f40a4fb9e17bd8867063524ce7871d49fd665c4',
+  repo: 'comments',
+  owner: 'lenconda',
+  admin: ['lenconda'],
+  id: md5(window.location.pathname),      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+});
+if (document.getElementById('comments')) {
+  gitalk.render('comments');
+}
+</script>
+
+</body>
+</html>

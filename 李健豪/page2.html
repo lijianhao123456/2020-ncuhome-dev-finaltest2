@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Lenconda 的技术博客 (Page 2)</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=42f2ea2754" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/firacode@2.0.0/distr/fira_code.min.css" />
+  <link rel="stylesheet" href="//highlightjs.org/static/demo/styles/vs2015.css">
+
+	<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://blog.lenconda.top/page/2/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="prev" href="http://blog.lenconda.top/" />
+    <link rel="next" href="http://blog.lenconda.top/page/3/" />
+    <script src="/public/ghost-sdk.min.js?v=42f2ea2754"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "66775b680128"
+});
+</script>
+    <meta name="generator" content="Ghost 2.14" />
+    <link rel="alternate" type="application/rss+xml" title="Lenconda 的技术博客" href="http://blog.lenconda.top/rss/" />
+</head>
+
+<body class="paged">
+
+	<div class="nav-header">
+		<nav class="nav-wrapper">
+				<ul role="navigation" aria-label="Navigation">
+		<li class="nav-zhu-ye" role="presentation"><a href="http://blog.lenconda.top/"><span>主页</span></a></li>
+		<li class="nav-biao-qian" role="presentation"><a href="http://blog.lenconda.top/tags/"><span>标签</span></a></li>
+		<li class="nav-guan-yu" role="presentation"><a href="http://blog.lenconda.top/about/"><span>关于</span></a></li>
+		<li class="nav-jian-li" role="presentation"><a href="http://resume.lenconda.top"><span>简历</span></a></li>
+		<li class="nav-zan-zhu" role="presentation"><a href="http://blog.lenconda.top/sponsor/"><span>赞助</span></a></li>
+</ul>
+
+				<ul class="nav-side">
+					<li class="nav-twitter"><a title="Twitter" href="https://twitter.com/LinuxerPHL" title="@LinuxerPHL" target="_blank"><i class="icon icon-twitter"></i><span>Twitter</span></a></li>
+					<li class="nav-facebook"><a title="Facebook" href="https://www.facebook.com/profile.php?id&#x3D;100010553585752" title="profile.php?id&#x3D;100010553585752" target="_blank"><i class="icon icon-facebook"></i><span>Facebook</span></a></li>
+					<li class="nav-subscribe"><a title="Subscribe" href="http://blog.lenconda.top/subscribe/" target="_blank"><i class="icon icon-mail"></i><span>订阅</span></a></li>
+					<li class="nav-rss"><a title="RSS" href="http://blog.lenconda.top/rss/" target="_blank"><i class="icon icon-rss"></i><span>RSS</span></a></li>
+					<li class="nav-search" style="display: none;"><a title="搜索"><i class="icon icon-search"></i><span>搜索</span></a></li>
+				</ul>
+		</nav>
+
+		<div class="nav-wrapper-control">
+			<div class="inner">
+				<a class="nav-menu"><i class="icon icon-menu"></i>菜单</a>
+				<a class="nav-search" style="display: none;" title="搜索"><i class="icon icon-search"></i><span>搜索</span></a>
+			</div>
+		</div>
+	</div>
+	<div class="nav-close"></div>
+
+	<section class="page-wrapper">
+
+		<header class="blog-header ">
+	<div class="inner">
+		<div class="box blog-box">
+			<h1 class="blog-name">Lenconda 的技术博客</h1>
+			<span class="blog-description">记录学习技术的过程与生活</span>
+	</div>
+</header>
+
+<div id="index" class="container">
+
+	<main class="content" role="main">
+
+		<div class="extra-pagination">
+	<nav class="pagination">
+	<div class="inner">
+		<div class="box pagination-box" role="navigation" aria-label="Pagination Navigation">
+			<a title="更新的文章" class="pagination-next" href="/"><i class="icon icon-arrow-left"></i> <span class="pagination-label">更新的文章</span></a>
+			<span class="pagination-info">第 2 页，共 7 页</span>
+			<a title="更早的文章" class="pagination-prev" href="/page/3/"><span class="pagination-label">更早的文章</span> <i class="icon icon-arrow-right"></i></a>
+		</div>
+	</div>
+</nav>
+
+</div>
+
+
+<article class="post tag-linux">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/10/16/5bc5a4885306fb000185553f/">SysVInit</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="16-10-2018">16 Oct 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/linux/">Linux</a>
+        </span>
+			<p class="post-excerpt">什么是 Init 系统，Iinit 系统的历史和现状Linux 操作系统的启动首先从 BIOS 开始，接下来进入 boot loader，由 bootloader 载入内核，进行内核初始化。内核初始化的最后一步就是启动 pid 为 1 的 init 进程。这个进程是系统的第一个进程。它负责产生其他所有用户进程。init 以守护进程方式存在，是所有其他进程的祖先。init 进程非常独特，能够完成其他进程无法完成的任务。Init 系统能够定义、管理和控制 init 进程的行为。它负责组织和运行许多独立的或相关的始化工作(因此被称为 init 系统)，从而让计算机系统进入某种用户预订的运行模式。仅仅将内核运行起来是毫无实际用途的，必须由 init 系统将系统代入可操作状态。比如启动外壳 shell 后，便有了人机交互，这样就可以让计算机执行一些预订程序完成有实际意义的任务。或者启动&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-react-native tag-react-js tag-android tag-mobile">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/08/27/5ba8420a5306fb0001855436/">将React Native应用签名打包成APK</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="27-08-2018">27 Aug 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/react-native/">React Native</a>
+            <a class="post-meta-tag" href="/tag/react-js/">React.js</a>
+            <a class="post-meta-tag" href="/tag/android/">Android</a>
+            <a class="post-meta-tag" href="/tag/mobile/">移动端</a>
+        </span>
+			<p class="post-excerpt">Android要求所有应用都有一个数字签名才会被允许安装在用户手机上，所以在把应用发布到类似Google Play Store这样的应用市场之前，你需要先生成一个签名的APK包。Android开发者官网上的如何给你的应用签名文档描述了签名的细节。 环境配置 Java Development Kit Android应用是由Java编写而成，生成签名的工具也同时依赖于Java Development Kit（JDK），因此，我们首先需要下载安装JDK。JDK的安装步骤很简单，在macOS环境下，只需将dmg镜像挂载，双击pkg文件，一直点击「Next」即可完成安装。安装完成后，为了确定JDK是否安装成功并且生效，请在终端中运行 java -version 如果结果如下图所示，则说明JDK已配置成功。 Android Studio Android Studio基于JetBrains Intellij IDEA开发，安装和配置方式和JetBrains IDE一致。在官网下载Mac安装包，依据提示安装并配置好Android SDK。 生成签名密钥 在配置好JDK之后，可以通过keytool生成一个密钥。macOS和Linux的keytool一般位于/usr/bin/keytool，Windows的keytool位于JDK安装目录的bin/&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-typescript tag-react-native tag-javascript">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/08/21/5ba864685306fb000185544a/">在React Native中使用TypeScript</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="21-08-2018">21 Aug 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/typescript/">TypeScript</a>
+            <a class="post-meta-tag" href="/tag/react-native/">React Native</a>
+            <a class="post-meta-tag" href="/tag/javascript/">Javascript</a>
+        </span>
+			<p class="post-excerpt">JavaScript是一门弱类型的编程语言，声明变量时不需要声明变量的数据类型，因此这门语言编写起来具有很强的灵活性。但是换句话说在开发大型项目或多人合作的项目中，JavaScript混乱的变量数据类型常常会让人很头疼。因此，引入“数据类型”的概念就十分有必要了。 关于TypeScript TypeScript是一门由Microsoft开发和维护的JavaScript的超集。TypeScript可以使用JavaScript中的所有代码和编码概念，TypeScript是为了使JavaScript的开发变得更加容易而创建的。 TypeScript 从核心语言方面和类概念的模塑方面对 JavaScript 对象模型进行扩展。 JavaScript 代码可以在无需任何修改的情况下与 TypeScript 一同工作，同时可以使用编译器将 TypeScript 代码转换为 JavaScript。 TypeScript 通过类型注解提供编译时的静态类型检查。 TypeScript 中的数据要求带有明确的类型，JavaScript不要求。 TypeScript 为函数提供了缺省参数值。 TypeScript 引入了 JavaScript 中没有的“类”概念。 TypeScript 中引入了模块的概念，可以把声明、数据、函数和类封装在模块中。 TypeScript的优势 1. 静态输入：静态类型化是一种功能，可以在开发人员编写脚本时检测错误。查找并修复错误是当今开发团队的迫切需求。有了这项功能，&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-react-native tag-css tag-babel">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/08/18/5ba853f05306fb000185543f/">在React Native中引入antd-mobile-rn</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="18-08-2018">18 Aug 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/react-native/">React Native</a>
+            <a class="post-meta-tag" href="/tag/css/">CSS</a>
+            <a class="post-meta-tag" href="/tag/babel/">Babel</a>
+        </span>
+			<p class="post-excerpt">Ant Design Mobile终于推出了React Native版本，但是使用起来依然比较麻烦。对于我个人而言，平时做项目也只用其中的几个组件。而无论是antd-mobile还是antd-mobile-rn，按需加载都比较麻烦。所以本文主要记录如何以按需引入的方式使用antd-mobile-rn 官方描述 UI 样式高度可配置，拓展性更强，轻松适应各类产品风格 基于 React Native 的 iOS / Android / Web 多平台支持，组件丰富、能全面覆盖各类场景 (antd-mobile) 提供 &quot;组件按需加载&quot; / &quot;Web 页面高清显示&quot; / &quot;SVG Icon&quot; 等优化方案，一体式开发 使用 TypeScript 开发，提供类型定义文件，支持类型及属性智能提示，方便业务开发 全面兼容 react / preact 安装&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-react-native tag-jsx">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/08/15/5ba8603a5306fb0001855445/">在React Native中使用.jsx/.tsx扩展</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="15-08-2018">15 Aug 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/react-native/">React Native</a>
+            <a class="post-meta-tag" href="/tag/jsx/">JSX</a>
+        </span>
+			<p class="post-excerpt">前言 JSX是Javascript XML扩展，它是一种由Facebook提出的语法糖，其目的是在编写React程序时简化描述用户界面的过程。这种语法糖兼顾简洁性与可维护性。 一种 JavaScript 的语法扩展。 我们推荐在 React 中使用 JSX 来描述用户界面。JSX 乍看起来可能比较像是模版语言，但事实上它完全是在 JavaScript 内部实现的。（摘自JSX 简介） 通常，一段JSX代码可以单独放在一个*.jsx文件中，再通过Babel的loader完成JSX到React DOM的转换。 在React Native项目中，JSX同样被广泛应用。但是React Native却存在一些令人费解的行为。在React Native项目中，*.jsx文件是默认不被支持的。当我们直接在React Native中通过ES6 import的方式引入某个JSX文件时，将会出现类似以下展示出的错误： 解决方法 React Native的提供了一个名为rn-cli.config.js的文件。这个文件用于配置React Native的各种选项。在React Native启动服务的过程中，React Native会搜寻位于各个目录下的rn-cli.config.&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-asc tag-linux">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/06/12/5ba886d95306fb000185545f/">超算DAY2·在Linux中安装Linpack并测试</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="12-06-2018">12 Jun 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/asc/">超算</a>
+            <a class="post-meta-tag" href="/tag/linux/">Linux</a>
+        </span>
+			<p class="post-excerpt">第二天·在Linux中安装Linpack并测试 实验环境 系统环境 Red Hat Enterprise Linux 7 硬件环境 lspci 00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02) 00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II] 00:01.1 IDE interface: Intel Corporation 82371SB PIIX3 IDE [Natoma/Triton&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-asc tag-linux">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/06/11/5ba885685306fb0001855459/">超算DAY1·Linux的安装与摧毁</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="11-06-2018">11 Jun 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/asc/">超算</a>
+            <a class="post-meta-tag" href="/tag/linux/">Linux</a>
+        </span>
+			<p class="post-excerpt">第一天·Linux的安装与摧毁 Linux的安装 由于硬件因素的限制，本次Linux发行版安装实验采用虚拟机的方式进行。由于Linux只是一个操作系统内核，基于Linux构建的操作系统繁多，但据我的经验来看，各种Linux发行版的安装方法都基本一致，而且各大发行版及其衍生版基本上都提供了人性化的安装程序。本次实验中的Linux发行版采用为服务器量身打造的CentOS 6.9。 本实验的系统环境： 操作系统：macOS 10.13.5 High Sierra 虚拟化平台：VMWare Fusion Pro 10.1.2 Linux发行版：CentOS 6.9 Final 实验步骤 1. 镜像的获取 Linux镜像通常是光盘映像文件，打包成（*.iso）发布，用户可将ISO镜像刻录到各种物理介质中，然后从这些介质中启动ISO进行安装操作或LiveCD测试。 下载好的镜像如下： 2. 在虚拟机中安装Linux发行版 和物理机类似，在虚拟机中引导ISO启动，即可进入CentOS的安装过程： 进行光驱检测之后选择系统语言、时间地区：&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-git tag-github">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2018/05/31/5ba63b86b2e873000113255c/">GitHug通关指南</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="31-05-2018">31 May 2018</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/git/">Git</a>
+            <a class="post-meta-tag" href="/tag/github/">GitHub</a>
+        </span>
+			<p class="post-excerpt">前言 GitHug是一个帮助Git用户提升Git使用技能的工具。Git初学者可以通过GitHug提升自己的技能。 说明：使用GitHug时，每完成一步，执行一次githug命令，GitHug会自动检测上一步是否被正确完成。如果正确完成，就会提示通过并自动跳到下一步；如果错误完成，将会显示报错信息。如果你不懂如何正确完成这一步，执行githug hint使GitHug显示提示信息。必要时可以参阅下文中的附加链接。 通关指南 1. init ******************************************************************************** *                                    Githug                                    * ******************************************************************************** No githug directory found, do you wish to create one? [yn]  y Welcome to Githug! Name: init Level: 1 Difficulty: * A new directory, `git_hug`, has been created; initialize an&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<nav class="pagination">
+	<div class="inner">
+		<div class="box pagination-box" role="navigation" aria-label="Pagination Navigation">
+			<a title="更新的文章" class="pagination-next" href="/"><i class="icon icon-arrow-left"></i> <span class="pagination-label">更新的文章</span></a>
+			<span class="pagination-info">第 2 页，共 7 页</span>
+			<a title="更早的文章" class="pagination-prev" href="/page/3/"><span class="pagination-label">更早的文章</span> <i class="icon icon-arrow-right"></i></a>
+		</div>
+	</div>
+</nav>
+
+
+	</main>
+
+</div>
+
+
+		<div id="search" class="container">
+			<div class="content">
+				<div class="blog-header">
+					<div class="inner">
+						<div class="archive archive-search box archive-box">
+							<form class="search">
+								<input type="text" id="search-field" placeholder="搜索&#8230;" />
+								<input type="submit" value="search" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<div id="results"></div>
+			</div>
+			<div class="search-close"></div>
+		</div>
+
+		<div class="nav-footer">
+			<nav class="nav-wrapper">
+				<span class="nav-copy">Lenconda 的技术博客 &copy; 2020</span>
+			</nav>
+		</div>
+
+	</section>
+
+	<script type="text/javascript" src="/assets/js/script.js?v=42f2ea2754"></script>
+
+	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.12.0/js/md5.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122660306-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122660306-1');
+</script>
+
+<script>
+  var footer = document.querySelector('.nav-footer > nav.nav-wrapper');
+  var credits = document.createElement('span');
+  credits.classList.add('nav-credits');
+  credits.innerText = '赣 ICP 备 18003233 号 - 1';
+  footer.append(credits);
+</script>
+
+<style>
+#show-disqus {
+  display: none;
+}
+.gt-comment-content {
+  text-align: left;
+}
+button.gt-btn {
+    border-radius: 0!important;
+    border: 1px solid #c4c7cc!important;
+    text-align: center;
+    color: #909499!important;
+    transition: all ease 0.2s!important;
+    box-sizing: border-box;
+}
+button.gt-btn:hover {
+  background-color: #fff!important;
+  border-color: #333!important;
+  color: #333!important;
+}
+button.gt-btn-public, button.gt-btn-login {
+  background-color: #333!important;
+  color: #fff!important;
+  border-color: #333!important;
+}
+.gt-container .gt-svg svg {
+  fill: #333!important;
+}
+.gt-container .gt-comment-admin .gt-comment-content {
+  background-color: #f9f9f9!important;
+}
+.gt-header-controls-tip {
+  display: none!important;
+}
+.gt-header-textarea, .gt-container .gt-header-preview {
+  border-radius: 0 !important;
+}
+.gt-container a {
+  color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+    box-shadow: inset 0 -1px 0 #333 !important;
+    transition: all ease-out 0.1s !important;
+  border-bottom: none !important;
+}
+.gt-container a:hover {
+  box-shadow: inset 0 -2px 0 #333!important;
+}
+a.gt-comment-like, a.gt-comment-edit, .gt-popup a,
+a.gt-avatar-github, a.gt-avatar-github:hover,
+a.gt-comment-reply, a.gt-comment-reply:hover,
+a.gt-comment-like:hover, a.gt-comment-edit:hover, .gt-popup a:hover {
+  box-shadow: none !important;
+  text-decoration: none!important;
+}
+.gt-popup a.is--active {
+  font-weight: 700!important;
+}
+.gt-popup a.is--active::before {
+  display: none!important;
+}
+</style>
+
+<script>
+const gitalk = new Gitalk({
+  clientID: '0fa9ddf60596f0aebf17',
+  clientSecret: '7f40a4fb9e17bd8867063524ce7871d49fd665c4',
+  repo: 'comments',
+  owner: 'lenconda',
+  admin: ['lenconda'],
+  id: md5(window.location.pathname),      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+});
+if (document.getElementById('comments')) {
+  gitalk.render('comments');
+}
+</script>
+
+</body>
+</html>

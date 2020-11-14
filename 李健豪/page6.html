@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Lenconda 的技术博客 (Page 6)</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=42f2ea2754" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/firacode@2.0.0/distr/fira_code.min.css" />
+  <link rel="stylesheet" href="//highlightjs.org/static/demo/styles/vs2015.css">
+
+	<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://blog.lenconda.top/page/6/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="prev" href="http://blog.lenconda.top/page/5/" />
+    <link rel="next" href="http://blog.lenconda.top/page/7/" />
+    <script src="/public/ghost-sdk.min.js?v=42f2ea2754"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "66775b680128"
+});
+</script>
+    <meta name="generator" content="Ghost 2.14" />
+    <link rel="alternate" type="application/rss+xml" title="Lenconda 的技术博客" href="http://blog.lenconda.top/rss/" />
+</head>
+
+<body class="paged">
+
+	<div class="nav-header">
+		<nav class="nav-wrapper">
+				<ul role="navigation" aria-label="Navigation">
+		<li class="nav-zhu-ye" role="presentation"><a href="http://blog.lenconda.top/"><span>主页</span></a></li>
+		<li class="nav-biao-qian" role="presentation"><a href="http://blog.lenconda.top/tags/"><span>标签</span></a></li>
+		<li class="nav-guan-yu" role="presentation"><a href="http://blog.lenconda.top/about/"><span>关于</span></a></li>
+		<li class="nav-jian-li" role="presentation"><a href="http://resume.lenconda.top"><span>简历</span></a></li>
+		<li class="nav-zan-zhu" role="presentation"><a href="http://blog.lenconda.top/sponsor/"><span>赞助</span></a></li>
+</ul>
+
+				<ul class="nav-side">
+					<li class="nav-twitter"><a title="Twitter" href="https://twitter.com/LinuxerPHL" title="@LinuxerPHL" target="_blank"><i class="icon icon-twitter"></i><span>Twitter</span></a></li>
+					<li class="nav-facebook"><a title="Facebook" href="https://www.facebook.com/profile.php?id&#x3D;100010553585752" title="profile.php?id&#x3D;100010553585752" target="_blank"><i class="icon icon-facebook"></i><span>Facebook</span></a></li>
+					<li class="nav-subscribe"><a title="Subscribe" href="http://blog.lenconda.top/subscribe/" target="_blank"><i class="icon icon-mail"></i><span>订阅</span></a></li>
+					<li class="nav-rss"><a title="RSS" href="http://blog.lenconda.top/rss/" target="_blank"><i class="icon icon-rss"></i><span>RSS</span></a></li>
+					<li class="nav-search" style="display: none;"><a title="搜索"><i class="icon icon-search"></i><span>搜索</span></a></li>
+				</ul>
+		</nav>
+
+		<div class="nav-wrapper-control">
+			<div class="inner">
+				<a class="nav-menu"><i class="icon icon-menu"></i>菜单</a>
+				<a class="nav-search" style="display: none;" title="搜索"><i class="icon icon-search"></i><span>搜索</span></a>
+			</div>
+		</div>
+	</div>
+	<div class="nav-close"></div>
+
+	<section class="page-wrapper">
+
+		<header class="blog-header ">
+	<div class="inner">
+		<div class="box blog-box">
+			<h1 class="blog-name">Lenconda 的技术博客</h1>
+			<span class="blog-description">记录学习技术的过程与生活</span>
+	</div>
+</header>
+
+<div id="index" class="container">
+
+	<main class="content" role="main">
+
+		<div class="extra-pagination">
+	<nav class="pagination">
+	<div class="inner">
+		<div class="box pagination-box" role="navigation" aria-label="Pagination Navigation">
+			<a title="更新的文章" class="pagination-next" href="/page/5/"><i class="icon icon-arrow-left"></i> <span class="pagination-label">更新的文章</span></a>
+			<span class="pagination-info">第 6 页，共 7 页</span>
+			<a title="更早的文章" class="pagination-prev" href="/page/7/"><span class="pagination-label">更早的文章</span> <i class="icon icon-arrow-right"></i></a>
+		</div>
+	</div>
+</nav>
+
+</div>
+
+
+<article class="post tag-nodejs">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/11/16/5bb739305306fb00018554af/">NodeJS服务器无法使用外部IP访问的解决方案</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="16-11-2017">16 Nov 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/nodejs/">NodeJS</a>
+        </span>
+			<p class="post-excerpt">最近在学习上碰到了一些坑，每天基本上是踩着坑前进的QAQ。比如说在学习Vue-cli脚手架搭建Vue.JS应用，就碰到了一个情况：执行npm run dev之后只能从本机访问Vue APP，外部IP访问永远都是无响应。 寻找解决方案 端口被禁用？ 正常人的第一反应肯定是端口的问题，于是我登上服务器执行iptables -F，清空IPTables中所有的规则，但很遗憾，并没有奏效。 可能仅仅只需要一个反向代理 首先想到的可能是需要Web服务器来实现外部访问。既然想到了这里，我就接着想到了利用反向代理的方法，将访问80端口的数据包代理到Node服务器监听的8080端口，再从8080端口取回response到80端口，从而实现外部IP访问Node服务器。 于是，我选择了反向代理性能卓越的Nginx作为Web服务器，查阅大量资料后写好了配置文件，重启Nginx成功，从外部访问80端口，仍然是默认的HTML页面，这使我很困惑，于是尝试不同参数的修改，但全都不奏效。 无奈之下，我只能从Node服务器本身入手。 监听的IP是什么？！ 继续分析还有什么因素导致无法通过外部IP访问Node服务器。我突然想起之前在学习服务器架设的时候遇到的坑，就是服务监听的IP不同可能导致访问效果的不同，比如说Httpd服务器监听127.0.0.1:80之后，只能通过127.0.0.1、localhost之类的来访问这台主机的Web服务，&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-css">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/11/02/5bb738ce5306fb00018554ac/">CSS的伪元素::before和::after</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="02-11-2017">02 Nov 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/css/">CSS</a>
+        </span>
+			<p class="post-excerpt">起因 之所以认识到::before和::after，是因为在分析其他网页代码是经常看到这两个东西。直到有一次我在https://elementary.io上看见一个超链接效果，如下图所示： 分析 随后我对这个链接进行了分析，发现在这个链接的&lt;a&gt;&lt;/a&gt;中只有“安全细则”四个字，并没有类似于大于号(&quot;&gt;&quot;)的字符； 然后考虑到开发者是否为超链接设置了CSS样式，于是我发现这个超链接被设置了一个名为read-more的CSS样式，在Chrome中找到这个样式的代码如下： ::after是个什么东西？以前似乎从来没有遇见过，但是经过查找资料之后对于用两个冒号似乎明了了起来： &quot;:before&quot; 伪元素可以在元素的内容前面插入新内容。 &quot;:after&quot; 伪元素可以在元素的内容之后插入新内容。 像::before和::after这样的元素在CSS中被称为“伪元素”，这两种伪元素分别用于在应用了某种样式的元素之前和之后插入新的内容。 就拿这段代码来说，::after伪元素中的content属性值\f105在font-awesome中代表fa-icon-angle-right，也就是右三角(形似“&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-css tag-html">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/11/02/5bb7385f5306fb00018554a8/">CSS实现毛玻璃效果</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="02-11-2017">02 Nov 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/css/">CSS</a>
+            <a class="post-meta-tag" href="/tag/html/">HTML</a>
+        </span>
+			<p class="post-excerpt">思路 在需要进行毛玻璃处理的元素上，使用滤镜blur()进行模糊处理。 困难 仅仅针对该元素使用滤镜，会将整个元素的文字一并模糊，而需要模糊的被元素覆盖的背景部分反而没有被模糊。 解决 为了解决这个问题，参考资料给出的方法是使用伪元素覆盖在该元素上，再在该伪元素上使用同样的背景图片，并设置绝对定位，上下左右的外边距都设成0，以完全覆盖在元素上。 具体实现 将一张图片设成body元素的背景： body{     background-image: url(&quot;http://pic1.win4000.com/wallpaper/f/5429075a60431.jpg&quot;); } 定义一个.main，进行一些样式的编写： .main{     height:600px;     width:1000px;     color: #282c34;     border-radius: 5px;     position:relative;     top:100px;     margin:0 auto;     padding:&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-javascript tag-regexp">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/10/06/5bb7372f5306fb00018554a0/">JavaScript获取URL参数值的方法</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="06-10-2017">06 Oct 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/javascript/">Javascript</a>
+            <a class="post-meta-tag" href="/tag/regexp/">正则表达式</a>
+        </span>
+			<p class="post-excerpt">情景 GET类型的URL参数以?开始，以&amp;分割每组类似于键值对的参数名和参数值，例如： http://localhost:8080/test.php?user=lenconda&amp;action=logout 针对这一个URL，我们提出要通过JavaScript取出user参数的值。 基于JavaScript的实现 我们有两种方案：1.使用传统的if和for语句进行判断；2.使用正则表达式提取想要的值。 预备知识 window.location.search 这个方法可以让我们获取到当前URL的所有参数的字符串形式，例如在本里中，使用此方法返回的值为 ?user=lenconda&amp;action=logout substr() 此方法最多接受两个参数：m和n，m表示截取字符串的起始位置，n表示截取字符串的长度。当n省略时，默认截取到字符串末尾处。在本例中，我们要去掉“?”，所以代码应该是这样的： window.location.search.&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-ecmascript-6-7-8 tag-javascript">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/10/05/5bb736f05306fb000185549c/">ECMAScript学习笔记-函数与变量</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="05-10-2017">05 Oct 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/ecmascript-6-7-8/">ECMAScript 6/7/8</a>
+            <a class="post-meta-tag" href="/tag/javascript/">Javascript</a>
+        </span>
+			<p class="post-excerpt">变量的声明 ECMAScript的变量是松散类型的。如下所示，使用var操作符定义一个名为“param”的新变量： var param; param变量可以被用来保存任何类型的数据。 var param1=1,param2=&quot;hello&quot;,param3=[&quot;w&quot;,&quot;o&quot;,&quot;r&quot;,&quot;l&quot;,&quot;d&quot;]; 上例可以同时定义多个变量，并且每个变量被赋予不同类型的值是合法的。 函数的声明 ECMAScript定义函数使用function操作符： function MyFunc(param1,param2,...){ 	_BODY_ } 关于函数的书写 ECMAScript中定义的函数的函数体可以不用{}括起来，但是为了增强代码的美观性和可读性，同时为了避免犯不必要的错误，函数体最好用{}括起。 关于在函数体中声明的变量 通常，&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-ecmascript-6-7-8 tag-javascript">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/09/28/5bb735e45306fb0001855498/">ECMAScript学习笔记-数据类型</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="28-09-2017">28 Sep 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/ecmascript-6-7-8/">ECMAScript 6/7/8</a>
+            <a class="post-meta-tag" href="/tag/javascript/">Javascript</a>
+        </span>
+			<p class="post-excerpt">数据类型 ECMAScript定义了5种基本类型：String、Number、Boolean、Undefined和Null；和1种复杂类型：Object。 5种基本类型分别对应着：字符串、数字、布尔值、未定义和空。 数据类型的探测 数据类型的探测一般采用typeof操作符，例如： var param=&quot;test&quot;; console.log(typeof param);//控制台返回object var param=true; console.log(typeof param);//控制台返回boolean var param=123; console.log(typeof param);//控制台返回number 关于变量未被赋值的情况 var param; console.log(typeof param);//控制台返回object&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-bootstrap tag-css tag-html">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/09/04/5bb7358a5306fb0001855493/">BootStrap列排序</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="04-09-2017">04 Sep 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/bootstrap/">Bootstrap</a>
+            <a class="post-meta-tag" href="/tag/css/">CSS</a>
+            <a class="post-meta-tag" href="/tag/html/">HTML</a>
+        </span>
+			<p class="post-excerpt">情境引入 假设一张页面的左部分有一个col-md-8的栏目，右侧有一个col-md-4的侧边栏。在响应式布局时，常常需要将侧边栏放置在col-md-8的上方，于是就可以引出下列代码： &lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt; &lt;div class=&quot;col-md-8&quot;&gt;&lt;/div&gt; 但是，由此将会导致一个问题：在正常显示时col-md-4的侧边栏将在col-md-8的左侧！ 问题解决 为了解决这一问题，BootStrap提供了push和pull两种列排序的方式。那col-md来说，将一个col向右移动称为col-md-push-，向左移动称为col-md-pull-： &lt;div class=&quot;col-md-4 col-md-push-8&quot;&gt;.col-md-4&lt;/div&gt; &lt;div class=&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<article class="post tag-css tag-html">
+	<div class="inner">
+		<div class="box post-box">
+			<h2 class="post-title"><a href="/posts/2017/09/03/5bb734ee5306fb000185548f/">通过纯CSS3实现简单的瀑布流布局</a></h2>
+      <span class="post-meta">
+        发表于 
+				<time datetime="03-09-2017">03 Sep 2017</time>
+      </span>
+        <span class="post-meta">
+          ，标签：
+            <a class="post-meta-tag" href="/tag/css/">CSS</a>
+            <a class="post-meta-tag" href="/tag/html/">HTML</a>
+        </span>
+			<p class="post-excerpt">原理 CSS3中存在一个column属性，通过设置column可以达到多列布局的要求。 基本语法 column: column-width, column-count column-width：规定每个列的宽度，因为瀑布流布局需要宽相等，高不等； column-count：规定页面中存在的列数，此属性并不常用。 代码的实现 css/style.css .container{     -webkit-column-width: 256px;     -moz-column-width: 256px;     column-width: 256px; } .box{     margin:10px;     width:254px;     border:1px solid #CCC;     box-shadow: 0 0 15px 0 #CCC; } .box img{     width:246px;     margin:4px; } .box p{     margin:6px;&hellip;</p>
+		</div>
+	</div>
+</article>
+
+
+<nav class="pagination">
+	<div class="inner">
+		<div class="box pagination-box" role="navigation" aria-label="Pagination Navigation">
+			<a title="更新的文章" class="pagination-next" href="/page/5/"><i class="icon icon-arrow-left"></i> <span class="pagination-label">更新的文章</span></a>
+			<span class="pagination-info">第 6 页，共 7 页</span>
+			<a title="更早的文章" class="pagination-prev" href="/page/7/"><span class="pagination-label">更早的文章</span> <i class="icon icon-arrow-right"></i></a>
+		</div>
+	</div>
+</nav>
+
+
+	</main>
+
+</div>
+
+
+		<div id="search" class="container">
+			<div class="content">
+				<div class="blog-header">
+					<div class="inner">
+						<div class="archive archive-search box archive-box">
+							<form class="search">
+								<input type="text" id="search-field" placeholder="搜索&#8230;" />
+								<input type="submit" value="search" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<div id="results"></div>
+			</div>
+			<div class="search-close"></div>
+		</div>
+
+		<div class="nav-footer">
+			<nav class="nav-wrapper">
+				<span class="nav-copy">Lenconda 的技术博客 &copy; 2020</span>
+			</nav>
+		</div>
+
+	</section>
+
+	<script type="text/javascript" src="/assets/js/script.js?v=42f2ea2754"></script>
+
+	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.12.0/js/md5.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122660306-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122660306-1');
+</script>
+
+<script>
+  var footer = document.querySelector('.nav-footer > nav.nav-wrapper');
+  var credits = document.createElement('span');
+  credits.classList.add('nav-credits');
+  credits.innerText = '赣 ICP 备 18003233 号 - 1';
+  footer.append(credits);
+</script>
+
+<style>
+#show-disqus {
+  display: none;
+}
+.gt-comment-content {
+  text-align: left;
+}
+button.gt-btn {
+    border-radius: 0!important;
+    border: 1px solid #c4c7cc!important;
+    text-align: center;
+    color: #909499!important;
+    transition: all ease 0.2s!important;
+    box-sizing: border-box;
+}
+button.gt-btn:hover {
+  background-color: #fff!important;
+  border-color: #333!important;
+  color: #333!important;
+}
+button.gt-btn-public, button.gt-btn-login {
+  background-color: #333!important;
+  color: #fff!important;
+  border-color: #333!important;
+}
+.gt-container .gt-svg svg {
+  fill: #333!important;
+}
+.gt-container .gt-comment-admin .gt-comment-content {
+  background-color: #f9f9f9!important;
+}
+.gt-header-controls-tip {
+  display: none!important;
+}
+.gt-header-textarea, .gt-container .gt-header-preview {
+  border-radius: 0 !important;
+}
+.gt-container a {
+  color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+    box-shadow: inset 0 -1px 0 #333 !important;
+    transition: all ease-out 0.1s !important;
+  border-bottom: none !important;
+}
+.gt-container a:hover {
+  box-shadow: inset 0 -2px 0 #333!important;
+}
+a.gt-comment-like, a.gt-comment-edit, .gt-popup a,
+a.gt-avatar-github, a.gt-avatar-github:hover,
+a.gt-comment-reply, a.gt-comment-reply:hover,
+a.gt-comment-like:hover, a.gt-comment-edit:hover, .gt-popup a:hover {
+  box-shadow: none !important;
+  text-decoration: none!important;
+}
+.gt-popup a.is--active {
+  font-weight: 700!important;
+}
+.gt-popup a.is--active::before {
+  display: none!important;
+}
+</style>
+
+<script>
+const gitalk = new Gitalk({
+  clientID: '0fa9ddf60596f0aebf17',
+  clientSecret: '7f40a4fb9e17bd8867063524ce7871d49fd665c4',
+  repo: 'comments',
+  owner: 'lenconda',
+  admin: ['lenconda'],
+  id: md5(window.location.pathname),      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+});
+if (document.getElementById('comments')) {
+  gitalk.render('comments');
+}
+</script>
+
+</body>
+</html>
